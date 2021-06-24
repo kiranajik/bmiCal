@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">BMI Calculator</string>
+    <string name="female">FEMALE</string>
+    <string name="male">MALE</string>
+    <string name="height">HEIGHT</string>
+    <string name="_173">173</string>
+    <string name="cm">cm</string>
+    <string name="male_icon">male icon</string>
+    <string name="female_icon">female icon</string>
+    <string name="age">AGE</string>
+    <string name="_19">19</string>
+    <string name="weight">WEIGHT</string>
+    <string name="_50">50</string>
+    <string name="calculate_bmi">CALCULATE BMI</string>
+    <string name="subtract_button_image">Subtract Button image</string>
+    <string name="add_button_image">Add Button image</string>
+    <string name="calculate_your_bmi">CALCULATE YOUR BMI</string>
+    <string name="_0">0</string>
+    <string name="your_result">Your Result</string>
+    <string name="condition">MILD THINNESS</string>
+    <string name="your_bmi">25.18</string>
+    <string name="normal_bmi_range">Normal BMI range</string>
+    <string name="normal_bmi">18.5 - 25kg/m2</string>
+    <string name="your_age">Your age :</string>
+    <string name="age_value">22</string>
+    <string name="category">UNDER WEIGHT</string>
+    <string name="recalculate">Recalculate</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BMI Calculator</string>
+    <string name="female">FEMALE</string>
+    <string name="male">MALE</string>
+    <string name="height">HEIGHT</string>
+    <string name="_173">173</string>
+    <string name="cm">cm</string>
+    <string name="male_icon">male icon</string>
+    <string name="female_icon">female icon</string>
+    <string name="age">AGE</string>
+    <string name="weight">WEIGHT</string>
+    <string name="_50">50</string>
+    <string name="subtract_button_image">Subtract Button image</string>
+    <string name="add_button_image">Add Button image</string>
+    <string name="recalculate">Recalculate</string>
+</resources>

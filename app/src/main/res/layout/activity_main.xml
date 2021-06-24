@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0A0D22">
+
+
+        <LinearLayout
+            android:id="@+id/femaleTile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/rounded_corners"
+            android:gravity="center"
+            android:onClick="femaleClick"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/heightGroup"
+            app:layout_constraintEnd_toStartOf="@+id/maleTile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/femaleIcon"
+                android:layout_width="match_parent"
+                android:layout_height="169dp"
+                android:contentDescription="@string/female_icon"
+                android:paddingTop="10dp"
+                app:srcCompat="@drawable/fem1" />
+
+            <TextView
+                android:id="@+id/femaleIconLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="0dp"
+                android:paddingBottom="2dp"
+                android:text="@string/female"
+                android:textColor="#E7E2E2"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/maleTile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/rounded_corners"
+            android:gravity="center"
+            android:onClick="maleClick"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/heightGroup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/femaleTile"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <ImageView
+                android:id="@+id/maleIcon"
+                android:layout_width="match_parent"
+                android:layout_height="169dp"
+                android:contentDescription="@string/male_icon"
+                android:paddingTop="2dp"
+                app:srcCompat="@drawable/men1" />
+
+            <TextView
+                android:id="@+id/maleIconLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="0dp"
+                android:paddingBottom="2dp"
+                android:text="@string/male"
+                android:textColor="#E7E2E2"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/heightGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/rounded_corners"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="@+id/maleTile"
+            app:layout_constraintStart_toStartOf="@+id/femaleTile"
+            app:layout_constraintTop_toBottomOf="@+id/femaleTile">
+
+
+            <TextView
+                android:id="@+id/heightLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:text="@string/height"
+                android:textAlignment="center"
+                android:textColor="#AFAEAE"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="329dp"
+                android:layout_height="65dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/heightText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/_0"
+                    android:textAlignment="textEnd"
+                    android:textColor="#F9F9F9"
+                    android:textSize="50sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/heightUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/cm"
+                    android:textAlignment="textStart"
+                    android:textColor="#AFAEAE"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                style="@style/Widget.AppCompat.SeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:max="250"
+                android:paddingBottom="3dp"
+                android:progress="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ageGroup"
+            android:layout_width="0dp"
+            android:layout_height="177dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rounded_corners"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/weightGroup"
+            app:layout_constraintHorizontal_bias="0.166"
+            app:layout_constraintStart_toStartOf="@+id/heightGroup"
+            app:layout_constraintTop_toBottomOf="@+id/heightGroup">
+
+            <TextView
+                android:id="@+id/agelabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:text="@string/age"
+                android:textAlignment="center"
+                android:textColor="#AFAEAE"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_19"
+                android:textAlignment="center"
+                android:textColor="#FFFF"
+                android:textSize="55sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ageSubtractButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/subtract_button_image"
+
+                    android:paddingStart="7dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="0dp"
+                    android:paddingEnd="4dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    app:srcCompat="@drawable/subtractbutton" />
+
+                <ImageView
+                    android:id="@+id/ageAddButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/add_button_image"
+                    android:paddingStart="7dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="0dp"
+                    android:paddingEnd="4dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    app:srcCompat="@drawable/addbutton" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/weightGroup"
+            android:layout_width="0dp"
+            android:layout_height="177dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/rounded_corners"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="@+id/heightGroup"
+            app:layout_constraintStart_toEndOf="@id/ageGroup"
+            app:layout_constraintTop_toBottomOf="@+id/heightGroup">
+
+            <TextView
+                android:id="@+id/weightlabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:text="@string/weight"
+                android:textAlignment="center"
+                android:textColor="#AFAEAE"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_50"
+                android:textAlignment="center"
+                android:textColor="#FFFF"
+                android:textSize="55sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/weightSubtractButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="7dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="0dp"
+                    android:paddingEnd="4dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    app:srcCompat="@drawable/subtractbutton"
+                    android:contentDescription="@string/subtract_button_image" />
+
+                <ImageView
+                    android:id="@+id/weightAddButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"                    android:paddingStart="7dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="0dp"
+                    android:paddingEnd="4dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    app:srcCompat="@drawable/addbutton"
+                    android:contentDescription="@string/add_button_image" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/calButton"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/calculate_button"
+            android:backgroundTint="#c6ffc1"
+            android:text="@string/calculate_your_bmi"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/weightGroup"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/ageGroup"
+            app:layout_constraintTop_toBottomOf="@+id/weightGroup"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
